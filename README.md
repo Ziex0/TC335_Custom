@@ -1,4 +1,4 @@
-# TrinityCore 3.3.5 (Wrath of the Lich King) with Custom Scripts
+# TrinityCore 3.3.5 (WotLK) with Custom Scripts
 <br>
 <br>
 <b>Custom Scripts (Hardcoded)</b>
