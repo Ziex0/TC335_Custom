@@ -22,7 +22,7 @@
 void Trinity::Banner::Show(char const* applicationName, void(*log)(char const* text), void(*logExtraInfo)())
 {
     log(Trinity::StringFormat("%s (%s)", GitRevision::GetFullVersion(), applicationName).c_str());
-    log("<Ctrl-C> to stop.\n");
+    log("<STRG-C> zum Beenden\n");
     log(" ______                       __");
     log("/\\__  _\\       __          __/\\ \\__");
     log("\\/_/\\ \\/ _ __ /\\_\\    ___ /\\_\\ \\, _\\  __  __");
@@ -31,7 +31,7 @@ void Trinity::Banner::Show(char const* applicationName, void(*log)(char const* t
     log("     \\ \\_\\ \\_\\  \\ \\_\\ \\_\\ \\_\\ \\_\\ \\__\\\\/`____ \\");
     log("      \\/_/\\/_/   \\/_/\\/_/\\/_/\\/_/\\/__/ `/___/> \\");
     log("                                 C O R E  /\\___/");
-    log("http://TrinityCore.org                    \\/__/\n");
+    log("Modified by YggDraz1l                     \\/__/\n");
 
     if (logExtraInfo)
         logExtraInfo();

@@ -52,14 +52,14 @@ using namespace boost::program_options;
 namespace fs = boost::filesystem;
 
 #ifndef _TRINITY_REALM_CONFIG
-# define _TRINITY_REALM_CONFIG  "authserver.conf"
+# define _TRINITY_REALM_CONFIG  "config/authserver.conf"
 #endif
 
 #if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
 #include "ServiceWin32.h"
-char serviceName[] = "authserver";
-char serviceLongName[] = "TrinityCore auth service";
-char serviceDescription[] = "TrinityCore World of Warcraft emulator auth service";
+char serviceName[] = "Login Server";
+char serviceLongName[] = "WotLK Login Server";
+char serviceDescription[] = "World of Warcraft WotLK Freeshard";
 /*
 * -1 - not in service mode
 *  0 - stopped
@@ -120,9 +120,9 @@ int main(int argc, char** argv)
         },
         []()
         {
-            TC_LOG_INFO("server.authserver", "Using configuration file %s.", sConfigMgr->GetFilename().c_str());
-            TC_LOG_INFO("server.authserver", "Using SSL version: %s (library: %s)", OPENSSL_VERSION_TEXT, SSLeay_version(SSLEAY_VERSION));
-            TC_LOG_INFO("server.authserver", "Using Boost version: %i.%i.%i", BOOST_VERSION / 100000, BOOST_VERSION / 100 % 1000, BOOST_VERSION % 100);
+            TC_LOG_INFO("server.authserver", "Verwendete Konfigurationsdatei: %s", sConfigMgr->GetFilename().c_str());
+            TC_LOG_INFO("server.authserver", "Verwendete SSL Version: %s (library: %s)", OPENSSL_VERSION_TEXT, SSLeay_version(SSLEAY_VERSION));
+            TC_LOG_INFO("server.authserver", "Verwendete Boost Version: %i.%i.%i", BOOST_VERSION / 100000, BOOST_VERSION / 100 % 1000, BOOST_VERSION % 100);
         }
     );
 
@@ -134,10 +134,10 @@ int main(int argc, char** argv)
     if (!pidFile.empty())
     {
         if (uint32 pid = CreatePIDFile(pidFile))
-            TC_LOG_INFO("server.authserver", "Daemon PID: %u\n", pid);
+            TC_LOG_INFO("server.authserver", "Login Server PID: %u\n", pid);
         else
         {
-            TC_LOG_ERROR("server.authserver", "Cannot create PID file %s.\n", pidFile.c_str());
+            TC_LOG_ERROR("server.authserver", "Die PID Datei kann nicht erstellt werden %s.\n", pidFile.c_str());
             return 1;
         }
     }
@@ -178,7 +178,7 @@ int main(int argc, char** argv)
 
     if (!sAuthSocketMgr.StartNetwork(*ioContext, bindIp, port))
     {
-        TC_LOG_ERROR("server.authserver", "Failed to initialize network");
+        TC_LOG_ERROR("server.authserver", "Initialisierung des Netzwerks fehlgeschlagen");
         return 1;
     }
 
@@ -224,7 +224,7 @@ int main(int argc, char** argv)
     banExpiryCheckTimer->cancel();
     dbPingTimer->cancel();
 
-    TC_LOG_INFO("server.authserver", "Halting process...");
+    TC_LOG_INFO("server.authserver", "Prozess wird beendet...");
 
     signals.cancel();
 
@@ -271,7 +271,7 @@ void KeepDatabaseAliveHandler(std::weak_ptr<Trinity::Asio::DeadlineTimer> dbPing
     {
         if (std::shared_ptr<Trinity::Asio::DeadlineTimer> dbPingTimer = dbPingTimerRef.lock())
         {
-            TC_LOG_INFO("server.authserver", "Ping MySQL to keep connection alive");
+            TC_LOG_INFO("server.authserver", "Rufe den MySQL Server um die Verbindung aufrecht zu halten");
             LoginDatabase.KeepAlive();
 
             dbPingTimer->expires_from_now(boost::posix_time::minutes(dbPingInterval));

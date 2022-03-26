@@ -88,7 +88,7 @@ public:
                         if (!item)
                         {
                             if (const char* slotname = TransmogDisplayVendorMgr::getSlotName(action, player->GetSession()))
-                                session->SendNotification("Kein Gegenstand angelegt im %s Inventarplatz", slotname);
+                                session->SendNotification("Kein angelegter Gegenstand im %s Inventarplatz", slotname);
                             OnGossipHello(player, creature);
                             return true;
                         }
@@ -143,14 +143,14 @@ public:
                         if (player->PlayerTalkClass->GetGossipMenu().GetMenuItemCount() <= 1)
                         {
                             if (const char* slotname = TransmogDisplayVendorMgr::getSlotName(action, player->GetSession()))
-                                session->SendNotification("Keine Transmogrifikationen vorhanden fuer %s", slotname);
+                                session->SendNotification("Keine Transmogrifikationen fur %s vorhanden", slotname);
                             OnGossipHello(player, creature);
                             return true;
                         }
 
                         SelectionStore::Selection temp = { item->GetEntry(), static_cast<uint8>(action), 0, 0 }; // entry, slot, offset, quality
                         TransmogDisplayVendorMgr::selectionStore.SetSelection(player->GetGUID().GetCounter(), temp);
-                        AddGossipItemFor(player, GOSSIP_ICON_TALK, "Zurueck..", SENDER_BACK, 0);
+                        AddGossipItemFor(player, GOSSIP_ICON_TALK, "Abbrechen", SENDER_BACK, 0);
                         SendGossipMenuFor(player, DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
                     } break;
                 case SENDER_BACK: // Back
@@ -172,11 +172,11 @@ public:
                         }
                         if (removed)
                         {
-                            session->SendAreaTriggerMessage("Transmogrifikationen von angelegter Ausruestung entfernt");
+                            session->SendAreaTriggerMessage("Transmogrifikationen von angelegter Ausrustung entfernt");
                         }
                         else
                         {
-                            session->SendNotification("Du hast keinen Transmogrifizierten Gegenstand");
+                            session->SendNotification("Du hast keine Transmogrifizierten Gegenstande angelegt");
                         }
                         OnGossipSelect(player, creature, SENDER_REMOVE_MENU, 0);
                     } break;
@@ -210,10 +210,10 @@ public:
                             if (!slotname)
                                 continue;
                             std::ostringstream ss;
-                            ss << "Entferne Transmogrifikation von " << slotname << "?";
+                            ss << "Entferne Transmogrifikationen von " << slotname << "?";
                             AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, (std::string)"Entferne von " + slotname, SENDER_REMOVE_ONE, slot, ss.str().c_str(), 0, false);
                         }
-                        AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "Entferne alle Transmogrifikation", SENDER_REMOVE_ALL, 0, "Bist Du sicher das alle Transmogrifikationen entfernt werden sollen?", 0, false);
+                        AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "Entferne alle Transmogrifikationen", SENDER_REMOVE_ALL, 0, "Bist Du sicher das alle Transmogrifikationen entfernt werden sollen?", 0, false);
                         AddGossipItemFor(player, GOSSIP_ICON_TALK, "Abbrechen", SENDER_BACK, 0);
                         SendGossipMenuFor(player, DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
                     } break;
@@ -237,7 +237,7 @@ public:
                         {
                             if (!TransmogDisplayVendorMgr::SuitableForTransmogrification(player, itemTemplate))
                             {
-                                player->GetSession()->SendNotification("Angelegter Gegenstand ist nicht geeignet fuer eine Transmogrifikation");
+                                player->GetSession()->SendNotification("Angelegter Gegenstand ist fur eine Transmogrifikation nicht geeignet");
                                 OnGossipSelect(player, creature, SENDER_SELECT_VENDOR, slot);
                                 return true;
                             }
@@ -304,7 +304,7 @@ public:
 
                             if (!itemCount)
                             {
-                                session->SendAreaTriggerMessage("Keine Gegenstaende gefunden");
+                                session->SendAreaTriggerMessage("Keine Gegenstande gefunden");
                                 OnGossipSelect(player, creature, SENDER_SELECT_VENDOR, slot);
                                 return true;
                             }
@@ -315,7 +315,7 @@ public:
                             Creature* vendor = player->GetNPCIfCanInteractWith(creature->GetGUID(), UNIT_NPC_FLAG_VENDOR);
                             if (!vendor)
                             {
-                                TC_LOG_DEBUG("network", "WORLD: SendListInventory - Unit (GUID: %u) not found or you can not interact with him.", creature->GetGUID().GetCounter());
+                                TC_LOG_DEBUG("network", "WORLD: SendListInventory - Einheit (GUID: %u) nicht auffindbar oder Du kannst mit Ihm nicht interagieren", creature->GetGUID().GetCounter());
                                 player->SendSellError(SELL_ERR_CANT_FIND_VENDOR, nullptr, ObjectGuid::Empty, 0);
                                 return true;
                             }
@@ -358,7 +358,7 @@ public:
 
                             if (!item_amount)
                             {
-                                session->SendAreaTriggerMessage("Keine Transmogrifikationen fuer angelegten Gegenstand gefunden");
+                                session->SendAreaTriggerMessage("Keine Transmogrifikationen fur angelegten Gegenstand gefunden");
                                 OnGossipSelect(player, creature, SENDER_SELECT_VENDOR, slot);
                                 return true;
                             }
@@ -508,7 +508,7 @@ public:
         for (uint32 v : TransmogDisplayVendorMgr::NotAllowedItems)
             TransmogDisplayVendorMgr::NotAllowed.push_back(v);
 
-        TC_LOG_INFO("server.loading", "Erstelle eine Liste verwendbarer Transmogrifikationen...");
+        TC_LOG_INFO("server.loading", "Erstelle eine Liste mit allen verwendbaren Transmogrifikationen...");
         // initialize .. for reload in future?
         for (uint32 i = 0; i < MAX_ITEM_SUBCLASS_WEAPON + MAX_ITEM_SUBCLASS_ARMOR; ++i)
             for (uint32 j = 0; j < MAX_INVTYPE; ++j)
@@ -550,7 +550,7 @@ public:
                         TransmogDisplayVendorMgr::optionMap[i][j][k]->resize(TransmogDisplayVendorMgr::optionMap[i][j][k]->size());
 
 #if !TRANSMOGRIFICATION_ALREADY_INSTALLED
-        TC_LOG_INFO("custom.transmog", "Entferne alle ungenutzten Transmogrifikationen...");
+        TC_LOG_INFO("custom.transmog", "Entferne alle nicht verwendeten Transmogrifikationen...");
         CharacterDatabase.DirectExecute("DELETE FROM custom_transmogrification WHERE NOT EXISTS (SELECT 1 FROM item_instance WHERE item_instance.guid = custom_transmogrification.GUID)");
 #endif
     }

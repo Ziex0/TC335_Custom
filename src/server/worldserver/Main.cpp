@@ -64,16 +64,16 @@ using namespace boost::program_options;
 namespace fs = boost::filesystem;
 
 #ifndef _TRINITY_CORE_CONFIG
-    #define _TRINITY_CORE_CONFIG  "worldserver.conf"
+    #define _TRINITY_CORE_CONFIG  "config/worldserver.conf"
 #endif
 
 #define WORLD_SLEEP_CONST 1
 
 #ifdef _WIN32
 #include "ServiceWin32.h"
-char serviceName[] = "worldserver";
-char serviceLongName[] = "TrinityCore world service";
-char serviceDescription[] = "TrinityCore World of Warcraft emulator world service";
+char serviceName[] = "World Server";
+char serviceLongName[] = "WotLK World Server";
+char serviceDescription[] = "World of Warcraft WotLK Freeshard";
 /*
  * -1 - not in service mode
  *  0 - stopped
@@ -202,9 +202,9 @@ extern int main(int argc, char** argv)
         },
         []()
         {
-            TC_LOG_INFO("server.worldserver", "Using configuration file %s.", sConfigMgr->GetFilename().c_str());
-            TC_LOG_INFO("server.worldserver", "Using SSL version: %s (library: %s)", OPENSSL_VERSION_TEXT, SSLeay_version(SSLEAY_VERSION));
-            TC_LOG_INFO("server.worldserver", "Using Boost version: %i.%i.%i", BOOST_VERSION / 100000, BOOST_VERSION / 100 % 1000, BOOST_VERSION % 100);
+            TC_LOG_INFO("server.worldserver", "Verwendete Konfigurationsdatei: %s", sConfigMgr->GetFilename().c_str());
+            TC_LOG_INFO("server.worldserver", "Verwendete SSL Version: %s (library: %s)", OPENSSL_VERSION_TEXT, SSLeay_version(SSLEAY_VERSION));
+            TC_LOG_INFO("server.worldserver", "Verwendete Boost Version: %i.%i.%i", BOOST_VERSION / 100000, BOOST_VERSION / 100 % 1000, BOOST_VERSION % 100);
         }
     );
 
@@ -400,7 +400,7 @@ extern int main(int argc, char** argv)
     // set server offline
     LoginDatabase.DirectPExecute("UPDATE realmlist SET flag = flag | %u WHERE id = '%d'", REALM_FLAG_OFFLINE, realm.Id.Realm);
 
-    TC_LOG_INFO("server.worldserver", "Halting process...");
+    TC_LOG_INFO("server.worldserver", "Prozess wird beendet...");
 
     // 0 - normal shutdown
     // 1 - shutdown at error
