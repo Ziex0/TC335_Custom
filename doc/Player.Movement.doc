@@ -1,0 +1,20 @@
+PLAYER MOVEMENT TYPE
+
+
+Root - 1
+Unroot - 2
+Water walk - 3
+Land walk - 4
+
+
+PLAYER MOVEMENT SPEED
+
+
+Run - 1
+Run backwards - 2
+Swim - 3
+Swim backwards - 4
+Walk - 5
+Fly - 6
+
+
