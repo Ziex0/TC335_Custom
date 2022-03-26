@@ -1,0 +1,11 @@
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\bin\Debug\DBCLoader.exe
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\bin\Debug\DBCLoader.pdb
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\bin\Debug\DBCLoader.xml
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.Extraction.resources
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.Form1.resources
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.Resources.resources
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.vbproj.GenerateResource.cache
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.vbproj.CoreCompileInputs.cache
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.exe
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.xml
+C:\Users\YggDraz1l\source\repos\DBCLoader\DBCLoader\obj\Debug\DBCLoader.pdb
