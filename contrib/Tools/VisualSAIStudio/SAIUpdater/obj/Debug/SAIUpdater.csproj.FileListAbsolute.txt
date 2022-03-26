@@ -1,0 +1,10 @@
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\bin\Debug\SAIUpdater.exe.config
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\bin\Debug\SAIUpdater.exe
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\bin\Debug\SAIUpdater.pdb
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\obj\Debug\SAIUpdater.csproj.AssemblyReference.cache
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\obj\Debug\SAIUpdater.MainForm.resources
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\obj\Debug\SAIUpdater.Properties.Resources.resources
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\obj\Debug\SAIUpdater.csproj.GenerateResource.cache
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\obj\Debug\SAIUpdater.csproj.CoreCompileInputs.cache
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\obj\Debug\SAIUpdater.exe
+O:\#WotLK\Source\VisualSAIStudio\SAIUpdater\obj\Debug\SAIUpdater.pdb
