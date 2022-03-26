@@ -1,0 +1,11 @@
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\bin\Debug\NPCGenerator.exe.config
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\bin\Debug\NPCGenerator.exe
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\bin\Debug\NPCGenerator.pdb
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\obj\Debug\NPCGenerator.csprojResolveAssemblyReference.cache
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\obj\Debug\NPCGenerator.Form1.resources
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\obj\Debug\NPCGenerator.Properties.Resources.resources
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\obj\Debug\NPCGenerator.csproj.GenerateResource.Cache
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\obj\Debug\NPCGenerator.exe
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\obj\Debug\NPCGenerator.pdb
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\bin\Debug\MySql.Data.dll
+D:\ProgramyC#\WoWModding\NPCGenerator\NPCGenerator\bin\Debug\MySql.Data.xml
