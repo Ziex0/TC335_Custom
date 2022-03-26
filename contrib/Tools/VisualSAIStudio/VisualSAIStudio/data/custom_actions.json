@@ -1,0 +1,46 @@
+[
+  {
+    "id": 999,
+    "name": "SMART_ACTION_EXAMPLE",
+    "parameters": [
+      {
+        "type": "SwitchParameter",
+        "name": "Type",
+        "required": true,
+        "values": {
+          "0": {"name": "SELECT 1"},
+          "1": {
+            "name": "SELECT 2",
+            "description": ""
+          },
+          "2": {
+            "name": "SELECT 3",
+            "description": ""
+          },
+          "3": {
+            "name": "SELECT 4",
+            "description": ""
+          }
+        }
+      },
+      {
+        "type": "CreatureParameter",
+        "name": "Creature",
+        "description": "Example desc"
+      }
+    ],
+    "conditions": [
+      {
+        "warning_type": "INVALID_TARGET",
+        "type": "CompareValue",
+        "invert": false,
+		"compared_parameter_id": 2,
+        "compare_to_parameter_id_": 2,
+        "compare_to_value": 10,
+        "compare_type": "GREATER_OR_EQUALS",
+        "error": "{compared} has to be higher than {compareto}"
+      }
+    ],
+    "description": "{target}, {targetcoords}, {targetid}, {pram1}, {pram2}, {pram1value}, {pram2value}"
+  }
+]
