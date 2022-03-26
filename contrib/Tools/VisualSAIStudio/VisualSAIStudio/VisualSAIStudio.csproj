@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D1A9DEA-19C5-47E1-B6DC-880B47162274}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisualSAIStudio</RootNamespace>
+    <AssemblyName>VisualSAIEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\sai icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\packages\FCTB.2.16.11.0\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\packages\ObjectListView.Official.2.8.1\lib\net20\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="PSTaskDialog">
+      <HintPath>..\PSTaskDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartFormat">
+      <HintPath>..\packages\SmartFormat.NET.1.6.1.0\lib\net40\SmartFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.9.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DBCConfig.cs" />
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangelogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangelogForm.Designer.cs">
+      <DependentUpon>ChangelogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChooseRowFromDBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChooseRowFromDBForm.Designer.cs">
+      <DependentUpon>ChooseRowFromDBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBConnectData.cs" />
+    <Compile Include="DynamicTypeDescriptor\CustomComponentModel.cs" />
+    <Compile Include="DynamicTypeDescriptor\DynamicTypeDescriptor.cs" />
+    <Compile Include="DynamicTypeDescriptor\StandardValueEditorUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DynamicTypeDescriptor\StandardValueEditorUI.Designer.cs">
+      <DependentUpon>StandardValueEditorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DatabaseConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DatabaseConnectForm.Designer.cs">
+      <DependentUpon>DatabaseConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorsWindow.Designer.cs">
+      <DependentUpon>ErrorsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Forms\SelectSAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectSAI.Designer.cs">
+      <DependentUpon>SelectSAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CodePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CodePreview.Designer.cs">
+      <DependentUpon>CodePreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SessionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SessionsForm.Designer.cs">
+      <DependentUpon>SessionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loader\LoadManager.cs" />
+    <Compile Include="Sessions\Session.cs" />
+    <Compile Include="History\EditHistory.cs" />
+    <Compile Include="History\OpenedHistory.cs" />
+    <Compile Include="DB\ModalEditor.cs" />
+    <Compile Include="Forms\PropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PropertyWindow.Designer.cs">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScratchWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScratchWindow.Designer.cs">
+      <DependentUpon>ScratchWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetroShell\Dwm.cs" />
+    <Compile Include="MetroShell\MetroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetroShell\WinAPI.cs" />
+    <Compile Include="Secure.cs" />
+    <Compile Include="Sessions\SessionManager.cs" />
+    <Compile Include="SkinableControls\SkinableContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableFastColoredTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableHScroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinablePropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableScratch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableVScrollBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableVScrollBar.Designer.cs">
+      <DependentUpon>SkinableVScrollBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinableControls\SkinableWebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\ToolBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkinableControls\ToolBox.Designer.cs">
+      <DependentUpon>ToolBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartScripts\CommentGenerator.cs" />
+    <Compile Include="SmartScripts\Events\EVENT_LINK.cs" />
+    <Compile Include="SmartScripts\SAIType.cs" />
+    <Compile Include="SmartScripts\SmartEventsCollection.cs" />
+    <Compile Include="DB\BinaryFormatExtensions.cs" />
+    <Compile Include="DB\DB2Reader.cs" />
+    <Compile Include="DB\DBConnect.cs" />
+    <Compile Include="DB\DBCReader.cs" />
+    <Compile Include="Scratch\DrawableContainerElement.cs" />
+    <Compile Include="Scratch\DrawableElement.cs" />
+    <Compile Include="Scratch\DrawableElementsCollection.cs" />
+    <Compile Include="SmartScripts\SmartFactory.cs" />
+    <Compile Include="SmartScripts\Conditions\SmartCondition.cs" />
+    <Compile Include="SmartScripts\ParameterConditionals\ParameterConditional.cs" />
+    <Compile Include="SmartScripts\ParametersConverter.cs" />
+    <Compile Include="SmartScripts\SmartElement.cs" />
+    <Compile Include="SmartScripts\Parameter.cs" />
+    <Compile Include="SmartScripts\Events\SmartEvent.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scratch\Scratch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scratch\Scratch.Designer.cs">
+      <DependentUpon>Scratch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartScripts\Actions\SmartAction.cs" />
+    <Compile Include="SmartScripts\SmartEventProperty.cs" />
+    <Compile Include="SmartScripts\SmartGenericJSONData.cs" />
+    <Compile Include="Forms\StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartScripts\SQLGenerator.cs" />
+    <Compile Include="SmartScripts\Targets\SmartTarget.cs" />
+    <Compile Include="DB\DB.cs" />
+    <Compile Include="SmartScripts\Warning.cs" />
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Style2012\VS2012ColorTable.cs" />
+    <Compile Include="Style2012\VS2012ToolStripExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Style2012\VS2012ToolStripExtender.Designer.cs">
+      <DependentUpon>VS2012ToolStripExtender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Style2012\VS2012ToolStripRenderer.cs" />
+    <Compile Include="Forms\ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Updater\UpdateData.cs" />
+    <Compile Include="Updater\Updater.cs" />
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangelogForm.resx">
+      <DependentUpon>ChangelogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChooseRowFromDBForm.resx">
+      <DependentUpon>ChooseRowFromDBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicTypeDescriptor\StandardValueEditorUI.resx">
+      <DependentUpon>StandardValueEditorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DatabaseConnectForm.resx">
+      <DependentUpon>DatabaseConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorsWindow.resx">
+      <DependentUpon>ErrorsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectSAI.resx">
+      <DependentUpon>SelectSAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CodePreview.resx">
+      <DependentUpon>CodePreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SessionsForm.resx">
+      <DependentUpon>SessionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetroShell\MetroForm.resx">
+      <DependentUpon>MetroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\PropertyWindow.resx">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScratchWindow.resx">
+      <DependentUpon>ScratchWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scratch\Scratch.resx">
+      <DependentUpon>Scratch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinableControls\SkinableFastColoredTextBox.resx">
+      <DependentUpon>SkinableFastColoredTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinableControls\SkinableHScroll.resx">
+      <DependentUpon>SkinableHScroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinableControls\SkinableScratch.resx">
+      <DependentUpon>SkinableScratch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinableControls\SkinableVScrollBar.resx">
+      <DependentUpon>SkinableVScrollBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinableControls\ToolBox.resx">
+      <DependentUpon>ToolBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="data\actions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\conditions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\custom_actions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\dbc.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\events.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\targets.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\actions.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\conditions.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\events.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\targets.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DynamicTypeDescriptor\DynamicTypeDescriptor.csproj" />
+    <Content Include="Resources\sai icon.ico" />
+    <Content Include="Resources\splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
