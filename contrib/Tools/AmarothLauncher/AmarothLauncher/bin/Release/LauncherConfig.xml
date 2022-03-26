@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This is a config file for Launcher. Feel free to edit whatever you want or even translate Launcher to your native language. Pay close attention to comments and documentation.-->
+<Config>
+
+  <!--Main settings of an application.-->
+  <Main>
+    <!--DeleteCache: 1 or 0. If 1, Cache folder is always deleted.-->
+    <DeleteCache>1</DeleteCache>
+
+    <!--KeepBackups: 1 or 0. If 1, .ext_ files are being kept as backups. Recommended 1.-->
+    <KeepBackups>1</KeepBackups>
+
+    <!--KeepBlizzlikeMPQs: 1 or 0. If 1, blizzlike MPQs in Data are ignored by Launcher. Otherwise they are handled in a same manner as custom one. Recommended 1.-->
+    <KeepBlizzlikeMPQs>1</KeepBlizzlikeMPQs>
+
+    <!--ForcedRealmlist: 1 or 0. If 1, realmlist.wtf will always be updated to match realmlist.wtf in FilesRootPath.-->
+    <ForcedRealmlist>1</ForcedRealmlist>
+
+    <!--FileProcessingOutputs: 1 or 0. If 1, messages about downloading and unziping files will be shown.-->
+    <FileProcessingOutputs>1</FileProcessingOutputs>
+  </Main>
+
+  <!--Paths to files and folders Launcher will work with. They are commonly all !CASE SENSITIVE!-->
+  <Paths>
+    <!--FilelistPath: Path to text filelist.-->
+    <FilelistPath>http://www.arathor.cz/launcher/filelistGM.conf</FilelistPath>
+
+    <!--VersionPath: Path to text file which contains your Lancher's current version (version is a double value with . as separator!-->
+    <VersionPath>http://www.arathor.cz/launcher/launcherversion.conf</VersionPath>
+
+    <!--LauncherPath: Path to a zip file with Launcher files - used if Launcher finds itself outdated.-->
+    <LauncherPath>http://www.arathor.cz/launcher/Launcher.zip</LauncherPath>
+
+    <!--FilesRootPath: Path to folder with files. Paths in filelist are relative to this path.-->
+    <FilesRootPath>http://www.arathor.cz/launcher/</FilesRootPath>
+
+    <!--ChangelogPath: !HTTP! path to changelog XML file.-->
+    <ChangelogPath>http://www.arathor.cz/launcher/changelog.xml</ChangelogPath>
+
+    <!--ChangelogFTPPath: !Full! !FTP! path to folder in which changelog is. Notice that //www/ part. You may want to use an IP instead of a domain name.-->
+    <ChangelogFTPPath>ftp://ftp.arathor.cz//www/launcher/</ChangelogFTPPath>
+
+    <!--Webpage: URL which is to be opened when user clicks on Project webpage button.-->
+    <Webpage>http://www.arathor.cz</Webpage>
+
+    <!--Registration: URL which is to be opened when user clicks on Registration button.-->
+    <Registration>http://cs.pribehy-xan.wikia.com/wiki/Kategorie:P%C5%99%C3%ADru%C4%8Dky</Registration>
+
+    <!--Instructions: URL which is to be opened when user clicks on Launcher manual button.-->
+    <Instructions>http://arathor.cz/?page_id=21</Instructions>
+
+    <!--HelloImage: URL to image which is to be displayed in Main window (latest news image). Clicking on it opens a changelog browser.-->
+    <HelloImage>http://www.arathor.cz/launcher/hello.jpg</HelloImage>
+  </Paths>
+
+  <!--Visual settings for Main Window.-->
+  <MainWindow>
+    <!--WindowName: Name of main window. Change this to match your project's name.-->
+    <WindowName>Arathor RP Launcher 1.0</WindowName>
+
+    <OutputBox>Výstup:</OutputBox>
+    <OptionalBox>Volitelné soubory:</OptionalBox>
+    <CheckForUpdatesButton>Zkontrolovat aktualizace</CheckForUpdatesButton>
+    <UpdateButton>Aktualizovat</UpdateButton>
+    <WebpageButton>Web</WebpageButton>
+    <RegistrationButton>RP příručky</RegistrationButton>
+    <LauncherInstructionsButton>Manuál k Launcheru</LauncherInstructionsButton>
+    <DeleteBackupsButton>Smazat .něco_ zálohy</DeleteBackupsButton>
+    <ChangelogEditorButton>Changelog editor</ChangelogEditorButton>
+    <ChangelogBrowserButton>Changelog</ChangelogBrowserButton>
+    <LaunchButton>Spustit hru</LaunchButton>
+    <ProgressText>Stahování: </ProgressText>
+    <ProgressSeparator> / </ProgressSeparator>
+    <DownloadSpeedUnits>/s, </DownloadSpeedUnits>
+    <remaining>zbývá</remaining>
+    <downloaded>staženo, </downloaded>
+    <ToolTipTotalSize>Celková velikost: </ToolTipTotalSize>
+    <PanelTotalSize>Celková velikost zastaralých:</PanelTotalSize>
+    <LabelTotalSizeOpt>Vybraných volitelných: </LabelTotalSizeOpt>
+    <LabelTotalSizeNonOpt>Povinných: </LabelTotalSizeNonOpt>
+    <second> s </second>
+    <minute> m </minute>
+    <hour> h </hour>
+    <Complete>Stahování dokončeno!</Complete>
+    <Errors>Došlo k chybám!</Errors>
+  </MainWindow>
+
+  <!--Visual settings for Changelog Editor. A lot of those are used by Changelog Browser as well.-->
+  <ChangelogEditor>
+    <WindowName>Changelog Editor</WindowName>
+    <ChangelogEntries>Záznamy:</ChangelogEntries>
+    <DateColumn>Datum</DateColumn>
+    <HeadingColumn>Název</HeadingColumn>
+    <Date>Datum:</Date>
+
+    <!--DateFormat: Carefully with this. MM for months, mm for minutes. You can use your own format, but it must be correct. Changelog's data must also be compatible with this, if your changelog isn't empty when this is being changed!-->
+    <DateFormat>dd.MM.yyyy hh:mm</DateFormat>
+
+    <PictureURL>URL obrázku:</PictureURL>
+    <Heading>Název:</Heading>
+    <PicturePreview>Test obrázku:</PicturePreview>
+    <Description>Popis:</Description>
+    <EditEntryButton>Upravit záznam</EditEntryButton>
+    <DeleteEntryButton>Smazat záznam</DeleteEntryButton>
+    <CreateEntryButton>Vytvořit nový záznam</CreateEntryButton>
+    <SaveEntryButton>Uložit záznam</SaveEntryButton>
+    <TestPictureButton>Ozkoušet obrázek</TestPictureButton>
+    <CancelButton>Zrušit změny</CancelButton>
+    <SaveButton>Uložit changelog</SaveButton>
+  </ChangelogEditor>
+
+  <!--Visual settings for Changelog Browser.-->
+  <ChangelogBrowser>
+    <WindowName>Changelog</WindowName>
+    <InfoText>Klikni na záznam vlevo, aby se zobrazily detaily k němu.</InfoText>
+    <Picture>Obrázek:</Picture>
+  </ChangelogBrowser>
+
+  <!--Visual settings for authentization dialog window for Changelog Editor.-->
+  <FTPLoginWindow>
+    <WindowName>Přihlášení k FTP</WindowName>
+    <Login>Jméno:</Login>
+    <Password>Heslo:</Password>
+    <OKButton>OK</OKButton>
+    <CancelButton>Zrušit</CancelButton>
+  </FTPLoginWindow>
+
+  <!--Various messages which can be output by Launcher.-->
+  <Messages>
+    <!--HelloMessage: Please, leave this here. If you want to add anything, add it behind original message.-->
+    <HelloMessage>Tento Launcher napsal Amaroth z www.model-changing.net.</HelloMessage>
+
+    <XmlNotOpened>LauncherConfig.xml nebyl nalezen. Jsou využivána výchozí nastavení a Launcher nemůže pokračovat. Stáhni si Launcher znovu!</XmlNotOpened>
+    <ChangelogNotOpened>Nepodařilo se otevřít soubor changelogu na webu.</ChangelogNotOpened>
+    <ChangelogNotLoaded>Nepodařilo se přečíst soubor changelogu z webu. Kontaktuj GMT, pokud problém setrvává.</ChangelogNotLoaded>
+    <ChangelogEmpty>Varování: Aktuálně je changelog prázdný. Vytváříš úplně nový.</ChangelogEmpty>
+    <InvalidFtpPassword>Chybné jméno či heslo, nebo chybná cesta ke složce s changelogem.</InvalidFtpPassword>
+    <PictureNotOpened>Obrázek se nepodařilo načíst. Je link správně?</PictureNotOpened>
+    <ChangelogNotUploaded>Changelog se nepodařilo nahrát. Jeho zálohu najdeš u Launcheru, nahraj jej ručně na FTP.</ChangelogNotUploaded>
+    <ChangelogUploadOK>Changelog byl úspěšně aktualizován.</ChangelogUploadOK>
+    <UnZipingFileError>Nepodařilo se rozbalit soubor: </UnZipingFileError>
+    <DownloadingFrom>Stahování souboru z: </DownloadingFrom>
+    <DownloadingTo>Do: </DownloadingTo>
+    <UnzipingFile>Rozbalování souboru: </UnzipingFile>
+    <FileDeletingError>Nepodařilo se odstranit soubor: </FileDeletingError>
+    <WowExeMissing>WoW.exe nebylo nalezeno!</WowExeMissing>
+    <DataDirMissing>Složka Data nebyla nalezena!</DataDirMissing>
+    <BlizzlikeMpqMissing>Nepodařilo se najít nepostradatelný soubor: </BlizzlikeMpqMissing>
+    <LauncherNotInWowDir>Tvůj herní klient je vážně poškozen, nebo se Launcher nenachází v jeho kořenové složce.</LauncherNotInWowDir>
+    <FilelistOpeningFailed>Launcher nemohl najít filelist na webu. Kontaktuj GMT, pokud problém setrvává. Chybová hláška: </FilelistOpeningFailed>
+    <FilelistReadingFailed>Filelist na webu se nepodařilo přečíst. Kontaktuj GMT, pokud problém setrvává.</FilelistReadingFailed>
+    <FileOnsWebMissing>Velikost souboru na webu se nepodařilo zjistit, nejspíše chybí, nebo je špatně nastavená cesta k němu. Chybějící soubor: </FileOnsWebMissing>
+    <WebRealmlistMissing>Soubor realmlist.wtf nebyl na webu nalezen, nepodařilo se ověřit, zda je místní realmlist správný.</WebRealmlistMissing>
+    <RealmlistMissing>Zdá se, že nikde nemáš realmlist.wtf. Zkontroluj, zda ti nechybí ve složce enGB/enUS a případně jej vytvoř.</RealmlistMissing>
+    <OptionalsPresetLoadFailed>Něco ze seznamu volitelných souborů chybí v tvém uloženém nastavení, nebo se změnil název nějaké položky. Zkontroluj výběr volitelných souborů, o které máš zájem.</OptionalsPresetLoadFailed>
+    <DownloadError>Došlo k chybě při stahování souboru: </DownloadError>
+    <FileDownloadError>Některé soubory patrně nebyly úspěšně staženy. Zkus znovu zkontrolovat aktualizace a aktualizovat herního klienta.</FileDownloadError>
+    <HelloImageNotLoaded>Uvítací obrázek se nepodařilo najít nebo načíst.</HelloImageNotLoaded>
+    <VersionNotVerified>Launcheru se nepodařilo ověřit, zda je aktuální. Kontaktuj GMT, pokud problém setrvává.</VersionNotVerified>
+    <CouldNotBeUpdated>Launcher se pokusil se zaktualizovat, ale akce skončila neúspěchem. Zkus jej znovu spustit, případně stáhnout novou verzi ručně z webu.</CouldNotBeUpdated>
+    <OutdatedLauncher>Zdá se, že na webu je k dispozici novější verze Launcheru. Launcher bude aktualizován.</OutdatedLauncher>
+    <LauncherUpdated>Launcher se zaktualizoval a bude restartován.</LauncherUpdated>
+    <Removing>Odstraňování souboru: </Removing>
+  </Messages>
+
+</Config>
