@@ -1001,6 +1001,12 @@ class TC_GAME_API Player : public Unit, public GridObject<Player>
         void SetCommandStatusOn(uint32 command) { _activeCheats |= command; }
         void SetCommandStatusOff(uint32 command) { _activeCheats &= ~command; }
 
+        // PlayedTimeReward
+        uint32 ptr_Interval;
+        uint32 ptr_Money;
+        uint32 ptr_Honor;
+        uint32 ptr_Arena;
+
         // Played Time Stuff
         time_t m_logintime;
         time_t m_Last_tick;
@@ -2180,11 +2186,11 @@ class TC_GAME_API Player : public Unit, public GridObject<Player>
         bool IsInWhisperWhiteList(ObjectGuid guid);
         void RemoveFromWhisperWhiteList(ObjectGuid guid) { WhisperList.remove(guid); }
 
-        bool SetDisableGravity(bool disable, bool packetOnly /* = false */, bool updateAnimationTier = true) override;
+        bool SetDisableGravity(bool disable, bool packetOnly /* = false */, bool updateAnimTier = true) override;
         bool SetCanFly(bool apply, bool packetOnly = false) override;
         bool SetWaterWalking(bool apply, bool packetOnly = false) override;
         bool SetFeatherFall(bool apply, bool packetOnly = false) override;
-        bool SetHover(bool enable, bool packetOnly = false, bool updateAnimationTier = true) override;
+        bool SetHover(bool enable, bool packetOnly = false, bool updateAnimTier = true) override;
 
         bool CanFly() const override { return m_movementInfo.HasMovementFlag(MOVEMENTFLAG_CAN_FLY); }
         bool CanEnterWater() const override { return true; }

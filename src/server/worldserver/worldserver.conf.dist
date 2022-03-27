@@ -4125,3 +4125,12 @@ Metric.OverallStatusInterval = 1
 
 #
 ###################################################################################################
+#
+
+PlayedTimeReward.Interval = 3600000
+PlayedTimeReward.Money    = 100000
+PlayedTimeReward.Honor    = 5
+PlayedTimeReward.Arena    = 1
+
+#
+###################################################################################################
