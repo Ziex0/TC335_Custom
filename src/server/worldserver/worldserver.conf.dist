@@ -4125,12 +4125,39 @@ Metric.OverallStatusInterval = 1
 
 #
 ###################################################################################################
+
+###################################################################################################
+# PLAYED TIME REWARD SYSTEM
+#
+#
+#            PlayedTimeReward.Interval
+#                       Description: Time you have to be Online to get a Reward
+#                       Default:           0 - (Disabled)
+#                                    3600000 - (1 Hour)
+#
+#
+#            PlayedTimeReward.Money
+#                       Description: Amount of Gold given as a Reward
+#                       Default:           0 - (Disabled)
+#                                     100000 - (10 Gold)
+#
+#
+#            PlayedTimeReward.Honour
+#                       Description: Amount of Honour Points given as a Reward
+#                       Default:           0 - (Disabled)
+#                                          5 - (5 Honour Points)
+#
+#
+#            PlayedTimeReward.Arena
+#                       Description: Amount of Arena Points given as a Reward
+#                       Default:           0 - (Disabled)
+#                                          1 - (1 Arena Point)
 #
 
 PlayedTimeReward.Interval = 3600000
 PlayedTimeReward.Money    = 100000
-PlayedTimeReward.Honor    = 5
-PlayedTimeReward.Arena    = 1
+PlayedTimeReward.Honor    = 0
+PlayedTimeReward.Arena    = 0
 
 #
 ###################################################################################################
