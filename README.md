@@ -7,6 +7,7 @@
 <p><li>Multi Vendor</li></p>
 <p><li>Transmogrification</li></p>
 <p><li>Creature and Object Scaling</li></p>
+<p><li>Played Time Reward System</li></p>
 <br>
 <br>
 <b>Custom Scripts (Softcoded)</b>
