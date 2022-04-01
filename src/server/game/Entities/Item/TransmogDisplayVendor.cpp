@@ -123,20 +123,20 @@ const char* TransmogDisplayVendorMgr::getSlotName(uint8 slot, WorldSession* /*se
 
     switch (slot)
     {
-        case EQUIPMENT_SLOT_HEAD: return  "Head";// session->GetTrinityString(LANG_SLOT_NAME_HEAD);
-        case EQUIPMENT_SLOT_SHOULDERS: return  "Shoulders";// session->GetTrinityString(LANG_SLOT_NAME_SHOULDERS);
-        case EQUIPMENT_SLOT_BODY: return  "Shirt";// session->GetTrinityString(LANG_SLOT_NAME_BODY);
-        case EQUIPMENT_SLOT_CHEST: return  "Chest";// session->GetTrinityString(LANG_SLOT_NAME_CHEST);
-        case EQUIPMENT_SLOT_WAIST: return  "Waist";// session->GetTrinityString(LANG_SLOT_NAME_WAIST);
-        case EQUIPMENT_SLOT_LEGS: return  "Legs";// session->GetTrinityString(LANG_SLOT_NAME_LEGS);
-        case EQUIPMENT_SLOT_FEET: return  "Feet";// session->GetTrinityString(LANG_SLOT_NAME_FEET);
-        case EQUIPMENT_SLOT_WRISTS: return  "Wrists";// session->GetTrinityString(LANG_SLOT_NAME_WRISTS);
-        case EQUIPMENT_SLOT_HANDS: return  "Hands";// session->GetTrinityString(LANG_SLOT_NAME_HANDS);
-        case EQUIPMENT_SLOT_BACK: return  "Back";// session->GetTrinityString(LANG_SLOT_NAME_BACK);
-        case EQUIPMENT_SLOT_MAINHAND: return  "Main hand";// session->GetTrinityString(LANG_SLOT_NAME_MAINHAND);
-        case EQUIPMENT_SLOT_OFFHAND: return  "Off hand";// session->GetTrinityString(LANG_SLOT_NAME_OFFHAND);
-        case EQUIPMENT_SLOT_RANGED: return  "Ranged";// session->GetTrinityString(LANG_SLOT_NAME_RANGED);
-        case EQUIPMENT_SLOT_TABARD: return  "Tabard";// session->GetTrinityString(LANG_SLOT_NAME_TABARD);
+        case EQUIPMENT_SLOT_HEAD: return  "Kopf";// session->GetTrinityString(LANG_SLOT_NAME_HEAD);
+        case EQUIPMENT_SLOT_SHOULDERS: return  "Schultern";// session->GetTrinityString(LANG_SLOT_NAME_SHOULDERS);
+        case EQUIPMENT_SLOT_BODY: return  "Hemd";// session->GetTrinityString(LANG_SLOT_NAME_BODY);
+        case EQUIPMENT_SLOT_CHEST: return  "Brust";// session->GetTrinityString(LANG_SLOT_NAME_CHEST);
+        case EQUIPMENT_SLOT_WAIST: return  "Talie";// session->GetTrinityString(LANG_SLOT_NAME_WAIST);
+        case EQUIPMENT_SLOT_LEGS: return  "Beine";// session->GetTrinityString(LANG_SLOT_NAME_LEGS);
+        case EQUIPMENT_SLOT_FEET: return  "Stiefel";// session->GetTrinityString(LANG_SLOT_NAME_FEET);
+        case EQUIPMENT_SLOT_WRISTS: return  "Handgelenke";// session->GetTrinityString(LANG_SLOT_NAME_WRISTS);
+        case EQUIPMENT_SLOT_HANDS: return  "Handschuhe";// session->GetTrinityString(LANG_SLOT_NAME_HANDS);
+        case EQUIPMENT_SLOT_BACK: return  "Umhang";// session->GetTrinityString(LANG_SLOT_NAME_BACK);
+        case EQUIPMENT_SLOT_MAINHAND: return  "Waffenhand";// session->GetTrinityString(LANG_SLOT_NAME_MAINHAND);
+        case EQUIPMENT_SLOT_OFFHAND: return  "Nebenhand";// session->GetTrinityString(LANG_SLOT_NAME_OFFHAND);
+        case EQUIPMENT_SLOT_RANGED: return  "Distanz";// session->GetTrinityString(LANG_SLOT_NAME_RANGED);
+        case EQUIPMENT_SLOT_TABARD: return  "Wappenrock";// session->GetTrinityString(LANG_SLOT_NAME_TABARD);
         default: return nullptr;
     }
 }
@@ -470,7 +470,7 @@ void TransmogDisplayVendorMgr::HandleTransmogrify(Player* player, Creature* /*cr
                 }
                 else
                 {
-                    player->GetSession()->SendNotification("You do not have enough %ss", getItemName(sObjectMgr->GetItemTemplate(TransmogDisplayVendorMgr::TokenEntry), player->GetSession()).c_str());
+                    player->GetSession()->SendNotification("Du hast nicht genug %ss", getItemName(sObjectMgr->GetItemTemplate(TransmogDisplayVendorMgr::TokenEntry), player->GetSession()).c_str());
                     return; // LANG_ERR_TRANSMOG_NOT_ENOUGH_TOKENS
                 }
             }
@@ -490,7 +490,7 @@ void TransmogDisplayVendorMgr::HandleTransmogrify(Player* player, Creature* /*cr
                 {
                     if (!player->HasEnoughMoney(cost))
                     {
-                        player->GetSession()->SendNotification("You do not have enough money");
+                        player->GetSession()->SendNotification("Du hast nicht genug Gold");
                         return; // LANG_ERR_TRANSMOG_NOT_ENOUGH_MONEY
                     }
                     player->ModifyMoney(-cost, false);
@@ -513,7 +513,7 @@ void TransmogDisplayVendorMgr::HandleTransmogrify(Player* player, Creature* /*cr
             //itemTransmogrifier->ClearSoulboundTradeable(player);
         }
 
-        player->GetSession()->SendAreaTriggerMessage("%s transmogrified", slotname);
+        player->GetSession()->SendAreaTriggerMessage("%s Transmogrifiziert", slotname);
         //return LANG_ERR_TRANSMOG_OK;
     }
 }

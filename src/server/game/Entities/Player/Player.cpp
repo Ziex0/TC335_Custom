@@ -1077,7 +1077,7 @@ void Player::Update(uint32 p_time)
     {
         if (ptr_Interval <= p_time)
         {
-            ChatHandler(GetSession()).PSendSysMessage("[Spielzeit System] :: Deine Treue zu uns wird belohnt.");
+            ChatHandler(GetSession()).PSendSysMessage("[|cff00ccffSpielzeit System]: |cffFF6EB4Deine Treue verdient eine Belohnung.");
             ModifyMoney(ptr_Money);
             ModifyHonorPoints(ptr_Honor);
             ModifyArenaPoints(ptr_Arena);
