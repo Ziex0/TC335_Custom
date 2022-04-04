@@ -143,14 +143,14 @@ public:
                         if (player->PlayerTalkClass->GetGossipMenu().GetMenuItemCount() <= 1)
                         {
                             if (const char* slotname = TransmogDisplayVendorMgr::getSlotName(action, player->GetSession()))
-                                session->SendNotification("Keine Transmogrifikationen fur %s vorhanden", slotname);
+                                session->SendNotification("Keine Transmogrifikationen für %s vorhanden", slotname);
                             OnGossipHello(player, creature);
                             return true;
                         }
 
                         SelectionStore::Selection temp = { item->GetEntry(), static_cast<uint8>(action), 0, 0 }; // entry, slot, offset, quality
                         TransmogDisplayVendorMgr::selectionStore.SetSelection(player->GetGUID().GetCounter(), temp);
-                        AddGossipItemFor(player, GOSSIP_ICON_TALK, "Abbrechen", SENDER_BACK, 0);
+                        AddGossipItemFor(player, GOSSIP_ICON_TALK, "Zurück", SENDER_BACK, 0);
                         SendGossipMenuFor(player, DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
                     } break;
                 case SENDER_BACK: // Back
@@ -172,11 +172,11 @@ public:
                         }
                         if (removed)
                         {
-                            session->SendAreaTriggerMessage("Transmogrifikationen von angelegter Ausrustung entfernt");
+                            session->SendAreaTriggerMessage("Transmogrifikationen von angelegter Ausrüstung entfernt");
                         }
                         else
                         {
-                            session->SendNotification("Du hast keine Transmogrifizierten Gegenstande angelegt");
+                            session->SendNotification("Du hast keine Transmogrifizierten Gegenstände angelegt");
                         }
                         OnGossipSelect(player, creature, SENDER_REMOVE_MENU, 0);
                     } break;
@@ -211,7 +211,7 @@ public:
                                 continue;
                             std::ostringstream ss;
                             ss << "Entferne Transmogrifikationen von " << slotname << "?";
-                            AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, (std::string)"Entferne von " + slotname, SENDER_REMOVE_ONE, slot, ss.str().c_str(), 0, false);
+                            AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, (std::string)"Entferne Transmog von " + slotname, SENDER_REMOVE_ONE, slot, ss.str().c_str(), 0, false);
                         }
                         AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "Entferne alle Transmogrifikationen", SENDER_REMOVE_ALL, 0, "Bist Du sicher das alle Transmogrifikationen entfernt werden sollen?", 0, false);
                         AddGossipItemFor(player, GOSSIP_ICON_TALK, "Abbrechen", SENDER_BACK, 0);
@@ -237,7 +237,7 @@ public:
                         {
                             if (!TransmogDisplayVendorMgr::SuitableForTransmogrification(player, itemTemplate))
                             {
-                                player->GetSession()->SendNotification("Angelegter Gegenstand ist fur eine Transmogrifikation nicht geeignet");
+                                player->GetSession()->SendNotification("Angelegter Gegenstand ist für eine Transmogrifikation nicht geeignet");
                                 OnGossipSelect(player, creature, SENDER_SELECT_VENDOR, slot);
                                 return true;
                             }
@@ -304,7 +304,7 @@ public:
 
                             if (!itemCount)
                             {
-                                session->SendAreaTriggerMessage("Keine Gegenstande gefunden");
+                                session->SendAreaTriggerMessage("Keine Gegenstände gefunden");
                                 OnGossipSelect(player, creature, SENDER_SELECT_VENDOR, slot);
                                 return true;
                             }
@@ -358,7 +358,7 @@ public:
 
                             if (!item_amount)
                             {
-                                session->SendAreaTriggerMessage("Keine Transmogrifikationen fur angelegten Gegenstand gefunden");
+                                session->SendAreaTriggerMessage("Keine Transmogrifikationen für angelegten Gegenstand gefunden");
                                 OnGossipSelect(player, creature, SENDER_SELECT_VENDOR, slot);
                                 return true;
                             }

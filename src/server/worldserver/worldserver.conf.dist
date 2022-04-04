@@ -38,6 +38,10 @@
 #    PACKET SPOOF PROTECTION SETTINGS
 #    MISC ANTI-CHEAT SETTINGS
 #    METRIC SETTINGS
+#    PLAYED TIME REWARD
+#    SKIP DEATHKNIGHT STARTING AREA
+#    SOLO LOOKING FOR GROUP
+#    SOLOCRAFT MODULE
 #
 ###################################################################################################
 
@@ -4161,3 +4165,365 @@ PlayedTimeReward.Arena    = 0
 
 #
 ###################################################################################################
+
+###################################################################################################
+# Skip Death Knight Starting Area
+#
+#
+#    Skip Death Knight Starting Area
+#        Enable this if you want to skip the Deathknight starting area
+#        Start with level 58 DK with Runeforging.
+#
+#    Skip.Deathknight.Starter.Announce.enable
+#         Description: Announces Module when player logs in.
+#         Default:    0 - (Disabled)
+#                     1 - (Enabled)
+
+Skip.Deathknight.Starter.Announce.enable = 1
+
+#    Skip.DeathKnight.Starter.Enable
+#         Active Module for all new accounts regardless of account level. Instant Skip on DK Creation.
+#         Default:    0 - (Disabled)
+#                     1 - (Enabled)
+
+Skip.Deathknight.Starter.Enable = 0
+
+#    GM.Skip.Deathknight.Starter.Enable
+#         Active Module for all new accounts of a GM account level ONLY. Instant Skip on DK Creation.
+#         Ensure you have Skip.Deathknight.Starter.Enable set to 0 if using this conf.
+#         Default:    0 - (Disabled)
+#                     1 - (Enabled)
+
+GM.Skip.Deathknight.Starter.Enable = 0
+
+#    Skip.Deathknight.Start.Level
+#         Adjusted Death Knight Start Level if module is used.
+#         Default:    58 - (Default)
+#
+
+Skip.Deathknight.Start.Level = 58
+
+#    Skip.Deathknight.Optional.Enable
+#    Enables optional to skip when talking to lich king on first creation of dk.
+#    Default: 1 - (Active)
+
+Skip.Deathknight.Optional.Enable = 1
+
+#
+###################################################################################################
+
+###################################################################################################
+# SOLO LFG
+#
+#    SoloLFG.Enable
+#        Description: Enable the module.
+#        Default:     1  - (Enabled)
+#                     0  - (Disabled)
+
+SoloLFG.Enable = 1
+
+#    SoloLFG.Announce
+#        Description: Announce the module.
+#        Default:     1  - (Enabled)
+#                     0  - (Disabled)
+
+SoloLFG.Announce = 1
+
+#
+###################################################################################################
+
+###################################################################################################
+# SOLOCRAFT
+#
+# Enable the module? (1: true | 0: false)
+#
+
+Solocraft.Enable = 1
+#
+#
+# Announce the module when the player logs in?
+#
+
+Solocraft.Announce = 1
+
+#
+###################################################################################################
+#  Balancing - Groups (Overloading), Spellpower, and Stats
+###################################################################################################
+# Enable Debuff of new party members who enter the dungeon to avoid overloading the dungeon?
+# Overloading is when a group member already in the dungeon has the full offset/buff of the
+# dungeon applied then they invite new group members who enter the dungeon and also receive an
+# offset which creates a huge imbalance.
+# The debuff will make the new members weak until all members leave the instance/dungeon
+# instance/dungeon and re-enter which will then split the offset among all the group members.
+# Default:  1 (on)
+#           0 (off)
+#
+
+SoloCraft.Debuff.Enable = 1
+
+# Spellpower Bonus Multiplier
+# Spellcasters spellpower bonus multiplier to offset no spellpower received from stats
+# Formula: (player->level * multiplier) * difficulty
+# Example Level 24 Mage with default modifier and  a dungeon difficulty of 5 will receive a base
+# Spellpower increase of 300.
+# Default:  2.5
+#           0.0 (Disable)
+#
+
+SoloCraft.Spellpower.Mult = 2.5
+
+# Stats Percentage Bonus Multiplier
+# Forumla: player->Stats * (difficulty * multiplier)
+# Default:  100.0
+#           0.0 (Disable)
+#
+#
+
+SoloCraft.Stats.Mult = 100.0
+
+#
+################################################################################################
+#Catch all Bucket - Difficulty Offset Defaults
+################################################################################################
+# Difficulty Multipliers
+# Defaults: 5, 10, 25, 40
+
+Solocraft.Dungeon = 5.0
+Solocraft.Heroic = 10.0
+Solocraft.Raid25 = 25.0
+Solocraft.Raid40 = 40.0
+
+################################################################################################
+# Classic Instances - Difficulty
+################################################################################################
+
+Solocraft.ShadowfangKeep = 5.0
+Solocraft.Stockades = 5.0
+Solocraft.Deadmines = 5.0
+Solocraft.WailingCaverns = 5.0
+Solocraft.RazorfenKraulInstance = 5.0
+Solocraft.Blackfathom = 5.0
+Solocraft.Uldaman = 5.0
+Solocraft.GnomeragonInstance = 5.0
+Solocraft.SunkenTemple = 5.0
+Solocraft.RazorfenDowns = 5.0
+Solocraft.MonasteryInstances = 5.0
+Solocraft.TanarisInstance = 5.0
+Solocraft.BlackRockSpire = 10.0
+Solocraft.BlackrockDepths = 5.0
+Solocraft.OnyxiaLairInstance = 40.0
+Solocraft.SchoolofNecromancy = 5.0
+Solocraft.Zul'gurub = 20.0
+Solocraft.Stratholme = 5.0
+Solocraft.Mauradon = 5.0
+Solocraft.OrgrimmarInstance = 5.0
+Solocraft.MoltenCore = 40.0
+Solocraft.DireMaul = 5.0
+Solocraft.BlackwingLair = 40.0
+Solocraft.AhnQiraj = 20.0
+Solocraft.AhnQirajTemple = 40.0
+
+################################################################################################
+#BC Instances - Difficulty
+################################################################################################
+
+Solocraft.CavernsOfTime = 5.0
+Solocraft.CavernsOfTimeH = 5.0
+Solocraft.Karazahn = 10.0
+Solocraft.HyjalPast = 25.0
+Solocraft.HellfireMilitary = 5.0
+Solocraft.HellfireMilitaryH = 5.0
+Solocraft.HellfireDemon = 5.0
+Solocraft.HellfireDemonH = 5.0
+Solocraft.HellfireRampart = 5.0
+Solocraft.HellfireRampartH = 5.0
+Solocraft.HellfireRaid = 25.0
+Solocraft.CoilfangPumping = 5.0
+Solocraft.CoilfangPumpingH = 5.0
+Solocraft.CoilfangMarsh = 5.0
+Solocraft.CoilfangMarshH = 5.0
+Solocraft.CoilfangDraenei = 5.0
+Solocraft.CoilfangDraeneiH = 5.0
+Solocraft.CoilfangRaid = 25.0
+Solocraft.TempestKeepRaid = 25.0
+Solocraft.TempestKeepArcane = 5.0
+Solocraft.TempestKeepArcaneH = 5.0
+Solocraft.TempestKeepAtrium = 5.0
+Solocraft.TempestKeepAtriumH = 5.0
+Solocraft.TempestKeepFactory = 5.0
+Solocraft.TempestKeepFactoryH = 5.0
+Solocraft.AuchindounShadow = 5.0
+Solocraft.AuchindounShadowH = 5.0
+Solocraft.AuchindounDemon = 5.0
+Solocraft.AuchindounDemonH = 5.0
+Solocraft.AuchindounEthereal = 5.0
+Solocraft.AuchindounEtherealH = 5.0
+Solocraft.AuchindounDraenei = 5.0
+Solocraft.AuchindounDraeneiH = 5.0
+Solocraft.HillsbradPast = 5.0
+Solocraft.HillsbradPastH = 5.0
+Solocraft.BlackTemple = 25.0
+Solocraft.GruulsLair = 25.0
+Solocraft.ZulAman = 5.0
+Solocraft.ZulAmanH = 5.0
+Solocraft.SunwellPlateau = 25.0
+Solocraft.Sunwell5ManFix = 5.0
+Solocraft.Sunwell5ManFixH = 5.0
+
+################################################################################################
+#WOTLK Instances - Difficulty
+################################################################################################
+
+Solocraft.StratholmeRaid = 10.0
+Solocraft.StratholmeRaidH = 25.0
+Solocraft.Valgarde70 = 5.0
+Solocraft.Valgarde70H = 5.0
+Solocraft.UtgardePinnacle = 5.0
+Solocraft.UtgardePinnacleH = 5.0
+Solocraft.Nexus70 = 5.0
+Solocraft.Nexus70H = 5.0
+Solocraft.Nexus80 = 5.0
+Solocraft.Nexus80H = 5.0
+Solocraft.StratholmeCOT = 5.0
+Solocraft.StratholmeCOTH = 5.0
+Solocraft.Ulduar70 = 5.0
+Solocraft.Ulduar70H = 5.0
+Solocraft.DrakTheronKeep = 5.0
+Solocraft.DrakTheronKeepH = 5.0
+Solocraft.Azjol_Uppercity = 5.0
+Solocraft.Azjol_UppercityH = 5.0
+Solocraft.Ulduar80 = 5.0
+Solocraft.Ulduar80H = 5.0
+Solocraft.UlduarRaid = 10.0
+Solocraft.UlduarRaidH = 25.0
+Solocraft.GunDrak = 5.0
+Solocraft.GunDrakH = 5.0
+Solocraft.DalaranPrison = 5.0
+Solocraft.DalaranPrisonH = 5.0
+Solocraft.ChamberOfAspectsBlack = 10.0
+Solocraft.ChamberOfAspectsBlackH = 25.0
+Solocraft.NexusRaid = 10.0
+Solocraft.NexusRaidH = 25.0
+Solocraft.Azjol_LowerCity = 5.0
+Solocraft.Azjol_LowerCityH = 5.0
+Solocraft.IcecrownCitadel = 10.0
+Solocraft.IcecrownCitadelH = 25.0
+Solocraft.IcecrownCitadel5Man = 5.0
+Solocraft.IcecrownCitadel5ManH = 5.0
+Solocraft.ArgentTournamentRaid = 10.0
+Solocraft.ArgentTournamentRaidH = 25.0
+Solocraft.ArgentTournamentRaidH10 = 10.0
+Solocraft.ArgentTournamentRaidH25 = 25.0
+Solocraft.ArgentTournamentDungeon = 5.0
+Solocraft.ArgentTournamentDungeonH = 5.0
+Solocraft.QuarryOfTears = 5.0
+Solocraft.QuarryOfTearsH = 5.0
+Solocraft.HallsOfReflection = 5.0
+Solocraft.HallsOfReflectionH = 5.0
+Solocraft.ChamberOfAspectsRed = 5.0
+Solocraft.ChamberOfAspectsRedH = 5.0
+
+################################################################################################
+# Player Level Thresholds
+################################################################################################
+# Max player level difference over the Dungeon's Level for Solocraft to apply the
+# difficulty offset buff.
+# Default: 10
+# Disable: 80
+Solocraft.Max.Level.Diff = 10
+################################################################################################
+# Dungeon Base Levels
+################################################################################################
+# Catch All - Default 80
+Solocraft.Dungeon.Level = 80
+################################################################################################
+# Classic Instances - Base Level
+################################################################################################
+
+Solocraft.ShadowfangKeep.Level = 15
+Solocraft.Stockades.Level = 22
+Solocraft.Deadmines.Level = 18
+Solocraft.WailingCaverns.Level = 17
+Solocraft.RazorfenKraulInstance.Level = 30
+Solocraft.Blackfathom.Level = 20
+Solocraft.Uldaman.Level = 40
+Solocraft.GnomeragonInstance.Level = 24
+Solocraft.SunkenTemple.Level = 50
+Solocraft.RazorfenDowns.Level = 40
+Solocraft.MonasteryInstances.Level = 35
+Solocraft.TanarisInstance.Level = 44
+Solocraft.BlackRockSpire.Level = 55
+Solocraft.BlackrockDepths.Level = 50
+Solocraft.OnyxiaLairInstance.Level = 60
+Solocraft.SchoolofNecromancy.Level = 55
+Solocraft.Zul'gurub.Level = 60
+Solocraft.Stratholme.Level = 55
+Solocraft.Mauradon.Level = 48
+Solocraft.OrgrimmarInstance.Level = 15
+Solocraft.MoltenCore.Level = 60
+Solocraft.DireMaul.Level = 48
+Solocraft.BlackwingLair.Level = 40
+Solocraft.AhnQiraj.Level = 60
+Solocraft.AhnQirajTemple.Level = 60
+
+################################################################################################
+# BC Instances - Base Level
+################################################################################################
+
+Solocraft.CavernsOfTime.Level = 68
+Solocraft.Karazahn.Level = 68
+Solocraft.HyjalPast.Level = 70
+Solocraft.HellfireMilitary.Level = 68
+Solocraft.HellfireDemon.Level = 68
+Solocraft.HellfireRampart.Level = 68
+Solocraft.HellfireRaid.Level = 68
+Solocraft.CoilfangPumping.Level = 68
+Solocraft.CoilfangMarsh.Level = 68
+Solocraft.CoilfangDraenei.Level = 68
+Solocraft.CoilfangRaid.Level = 70
+Solocraft.TempestKeepRaid.Level = 70
+Solocraft.TempestKeepArcane.Level = 68
+Solocraft.TempestKeepAtrium.Level = 68
+Solocraft.TempestKeepFactory.Level = 68
+Solocraft.AuchindounShadow.Level = 68
+Solocraft.AuchindounDemon.Level = 68
+Solocraft.AuchindounEthereal.Level = 68
+Solocraft.AuchindounDraenei.Level = 68
+Solocraft.HillsbradPast.Level = 68
+Solocraft.BlackTemple.Level = 70
+Solocraft.GruulsLair.Level = 70
+Solocraft.ZulAman.Level = 68
+Solocraft.SunwellPlateau.Level = 70
+Solocraft.Sunwell5ManFix.Level = 68
+
+################################################################################################
+# WOTLK Instances - Base Level
+################################################################################################
+
+Solocraft.StratholmeRaid.Level = 78
+Solocraft.Valgarde70.Level = 78
+Solocraft.UtgardePinnacle.Level = 78
+Solocraft.Nexus70.Level = 78
+Solocraft.Nexus80.Level = 78
+Solocraft.StratholmeCOT.Level = 78
+Solocraft.Ulduar70.Level = 78
+Solocraft.DrakTheronKeep.Level = 78
+Solocraft.Azjol_Uppercity.Level = 78
+Solocraft.Ulduar80.Level = 78
+Solocraft.UlduarRaid.Level = 80
+Solocraft.GunDrak.Level = 78
+Solocraft.DalaranPrison.Level = 78
+Solocraft.ChamberOfAspectsBlack.Level = 80
+Solocraft.NexusRaid.Level = 80
+Solocraft.Azjol_LowerCity.Level = 78
+Solocraft.IcecrownCitadel.Level = 80
+Solocraft.IcecrownCitadel5Man.Level = 78
+Solocraft.ArgentTournamentDungeon.Level = 80
+Solocraft.ArgentTournamentRaid.Level = 80
+Solocraft.QuarryOfTears.Level = 78
+Solocraft.HallsOfReflection.Level = 78
+Solocraft.ChamberOfAspectsRed.Level = 80
+
+################################################################################################
+
