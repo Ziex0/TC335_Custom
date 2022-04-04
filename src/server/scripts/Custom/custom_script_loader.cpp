@@ -17,7 +17,6 @@
 
 // This is where scripts' loading functions should be declared:
 void AddSC_NPC_TransmogDisplayVendor();
-void AddSC_skip_StarterArea();
 void AddLfgSoloScripts();
 void AddSolocraftScripts();
 
@@ -26,7 +25,6 @@ void AddSolocraftScripts();
 void AddCustomScripts()
 {
     AddSC_NPC_TransmogDisplayVendor();
-    AddSC_skip_StarterArea();
     AddLfgSoloScripts();
     AddSolocraftScripts();
 }
