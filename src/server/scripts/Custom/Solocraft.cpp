@@ -296,7 +296,7 @@ public:
         {
             if (SoloCraftAnnounceModule)
             {
-                ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server arbeitet mit dem |cff4CFF00SoloCraft |rModul.");
+                ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server arbeitet mit dem |cff4CFF00SoloCraft Modul|r.");
             }
         }
     }
@@ -455,13 +455,13 @@ private:
                 if (difficulty > 0)
                 {
                     // Announce to player - Buff
-                    ss << "|cffFF0000[SoloCraft] |cffFF8000" << player->GetName() << " entered %s  - Difficulty Offset: %0.2f. Spellpower Bonus: %i";
+                    ss << "|cFFADFF2F[SoloCraft] |cffFF8000" << player->GetName() << " betritt %s  - Schwierigkeitsausgleich: %0.2f. Zauberkraft Bonus: %i";
                     ChatHandler(player->GetSession()).PSendSysMessage(ss.str().c_str(), map->GetMapName(), difficulty, SpellPowerBonus);
                 }
                 else
                 {
                     // Announce to player - Debuff
-                    ss << "|cffFF0000[SoloCraft] |cffFF8000" << player->GetName() << " entered %s  - |cffFF0000BE ADVISED - You have been debuffed by offset: %0.2f. |cffFF8000 A group member already inside has the dungeon's full buff offset.  No Spellpower buff will be applied to spell casters.  ALL group members must exit the dungeon and re-enter to receive a balanced offset.";
+                    ss << "|cFFADFF2F[SoloCraft] |cffFF8000" << player->GetName() << " betritt %s  - |cFFADFF2FBE ADVISED - You have been debuffed by offset: %0.2f. |cffFF8000 A group member already inside has the dungeon's full buff offset.  No Spellpower buff will be applied to spell casters.  ALL group members must exit the dungeon and re-enter to receive a balanced offset.";
                     ChatHandler(player->GetSession()).PSendSysMessage(ss.str().c_str(), map->GetMapName(), difficulty);
                 }
                 // Save Player Dungeon Offsets to Database
@@ -470,7 +470,7 @@ private:
             else
             {
                 // Announce to player - Over Max Level Threshold
-                ss << "|cffFF0000[SoloCraft] |cffFF8000" << player->GetName() << " entered %s  - |cffFF0000You have not been buffed. |cffFF8000 Your level is higher than the max level (%i) threshold for this dungeon.";
+                ss << "|cFFADFF2F[SoloCraft] |cffFF8000" << player->GetName() << " betritt %s  - |cFFADFF2FDu wurdest nicht gebufft. |cffFF8000 Level ist höher als maximale Level (%i) für diesen Dungeon.";
                 ChatHandler(player->GetSession()).PSendSysMessage(ss.str().c_str(), map->GetMapName(), dunLevel + SolocraftLevelDiff);
                 ClearBuffs(player, map); //Check to revert player back to normal
             }
@@ -523,7 +523,7 @@ private:
             //sLog->outError("Map difficulty: %f", difficulty);
             // Inform the player
             std::ostringstream ss;
-            ss << "|cffFF0000[SoloCraft] |cffFF8000" << player->GetName() << " exited to %s - Reverting Difficulty Offset: %0.2f. Spellpower Bonus Removed: %i";
+            ss << "|cFFADFF2F[SoloCraft] |cffFF8000" << player->GetName() << " verlässt Instanz nach %s - Schwierigkeitsausgleich zurückgesetzt: %0.2f. Zauberkraft Bonus entfernt: %i";
             ChatHandler(player->GetSession()).PSendSysMessage(ss.str().c_str(), map->GetMapName(), difficulty, SpellPowerBonus);
             // Clear the buffs
             for (int32 i = STAT_STRENGTH; i < MAX_STATS; ++i)

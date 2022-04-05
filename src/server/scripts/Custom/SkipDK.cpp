@@ -46,7 +46,7 @@ public:
     {
         if (sConfigMgr->GetBoolDefault("Skip.Deathknight.Starter.Announce.enable", true))
         {
-            ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server arbeitet mit dem |cff4CFF00Skip Deathknight Start |rModul.");
+            ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server arbeitet mit dem |cff4CFF00Skip DK Start Area Modul|r.");
         }
     }
 };
@@ -320,4 +320,4 @@ void AddSC_skip_StarterArea()
     new Trinitycore_skip_deathknight_announce;
     new Trinitycore_skip_deathknight;
     new Trinitycore_optional_deathknight_skip;
-}
+}
