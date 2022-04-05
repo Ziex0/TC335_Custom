@@ -1,7 +1,5 @@
 <div align="center">
-<br>
-<br>
-<img src="https://raw.githubusercontent.com/ZON3DEV/TC335_Custom/master/doc/Images/TC_Logo.png" width=45%></img></div>
+<img src="https://raw.githubusercontent.com/ZON3DEV/TC335_Custom/master/doc/Images/TC_Logo.png" width=55%></img></div>
 <div align ="center"><b>Custom Scripts (Hardcoded)</b></div>
 <br>
 <div align ="center"><p><li>Dress NPCs</li></p>
