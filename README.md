@@ -1,4 +1,4 @@
-<div align="center">Core Build 28.03.2022 (Win64 Dynamic Release)
+<div align="center">
 <br>
 <br>
 <img src="https://raw.githubusercontent.com/ZON3DEV/TC335_Custom/master/doc/Images/TC_Logo.png" width=45%></img></div>
