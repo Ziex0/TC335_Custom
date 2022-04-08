@@ -16,4 +16,8 @@
 <b>Custom Scripts (Softcoded)</b>
 <br>
 <p><li>Buff NPC</li></p>
-<p><li>Teleport NPC</li></p></div>
+<p><li>Teleport NPC</li></p>
+<p><li>Some Custom Items</p></li>
+<p><li>Flying on any Map</p></li>
+<p><li>Riding Scrolls</p></li>
+</div>
