@@ -46,7 +46,7 @@ namespace ClientItem
                 }
                 catch (MySqlException e)
                 {
-                    MessageBox.Show("Connection wasn't succesful. Error: " + e.Number + "\n\n" + e.ToString());
+                    MessageBox.Show("Keine Verbindung möglich. Error: " + e.Number + "\n\n" + e.ToString());
                     connection = null;
                 }
             }
@@ -56,7 +56,7 @@ namespace ClientItem
         {
             CreateConnection();
             if (connection != null)
-                MessageBox.Show("Connection was successful.");
+                MessageBox.Show("Verbindung erfolgreich.");
         }
 
         private void DownloadData()
@@ -97,7 +97,7 @@ namespace ClientItem
                     MessageBox.Show("Error has occured:\n" + e.Message);
                 }
 
-                MessageBox.Show("All successfully done!");
+                MessageBox.Show("Alle benötigten Informationen wurden erfolgreich geladen.");
                 swWMV.Close();
                 swDBC.Close();
                 connection.Close();

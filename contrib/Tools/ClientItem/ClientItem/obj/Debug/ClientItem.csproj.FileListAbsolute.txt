@@ -9,3 +9,15 @@ D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Debug\ClientItem.exe
 D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Debug\ClientItem.pdb
 D:\ProgramyC#\WoWModding\ClientItem\ClientItem\bin\Debug\MySql.Data.dll
 D:\ProgramyC#\WoWModding\ClientItem\ClientItem\bin\Debug\MySql.Data.xml
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\bin\Debug\ClientItem.exe.config
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\bin\Debug\ClientItem.exe
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\bin\Debug\ClientItem.pdb
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.csproj.AssemblyReference.cache
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.csproj.SuggestedBindingRedirects.cache
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.Form1.resources
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.Properties.Resources.resources
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.csproj.GenerateResource.cache
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.csproj.CoreCompileInputs.cache
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.csproj.CopyComplete
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.exe
+O:\#WotLK\Tools\Modeling\AmarothTools\ClientItem\src\ClientItem\ClientItem\obj\Debug\ClientItem.pdb

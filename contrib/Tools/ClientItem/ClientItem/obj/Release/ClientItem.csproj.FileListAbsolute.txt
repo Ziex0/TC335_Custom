@@ -1,0 +1,11 @@
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\bin\Release\ClientItem.exe.config
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\bin\Release\ClientItem.exe
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\bin\Release\ClientItem.pdb
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\bin\Release\MySql.Data.dll
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\bin\Release\MySql.Data.xml
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Release\ClientItem.Form1.resources
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Release\ClientItem.Properties.Resources.resources
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Release\ClientItem.csproj.GenerateResource.Cache
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Release\ClientItem.exe
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Release\ClientItem.pdb
+D:\ProgramyC#\WoWModding\ClientItem\ClientItem\obj\Release\ClientItem.csprojResolveAssemblyReference.cache
