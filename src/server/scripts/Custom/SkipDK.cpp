@@ -46,7 +46,7 @@ public:
     {
         if (sConfigMgr->GetBoolDefault("Skip.Deathknight.Starter.Announce.enable", true))
         {
-            ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server arbeitet mit dem |cff4CFF00Skip DK Start Area Modul|r.");
+            ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server nutzt das |cff4CFF00Skip DK Start Area|r Modul.");
         }
     }
 };

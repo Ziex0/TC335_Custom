@@ -296,7 +296,7 @@ public:
         {
             if (SoloCraftAnnounceModule)
             {
-                ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server arbeitet mit dem |cff4CFF00SoloCraft Modul|r.");
+                ChatHandler(Player->GetSession()).SendSysMessage("Dieser Server nutzt das |cff4CFF00SoloCraft|r Modul.");
             }
         }
     }

@@ -24,7 +24,7 @@ public:
         // Announce Module
         if (sConfigMgr->GetBoolDefault("SoloLFG.Announce", true))
         {
-            ChatHandler(player->GetSession()).SendSysMessage("Dieser Server arbeitet mit dem |cff4CFF00Solo Dungeon Finder|r.");
+            ChatHandler(player->GetSession()).SendSysMessage("Dieser Server nutzt das |cff4CFF00Solo Dungeon Finder|r Modul.");
          }
     }
 };
