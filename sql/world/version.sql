@@ -37,7 +37,7 @@ CREATE TABLE `version` (
 
 LOCK TABLES `version` WRITE;
 /*!40000 ALTER TABLE `version` DISABLE KEYS */;
-INSERT INTO `version` (`core_version`, `core_revision`, `db_version`, `cache_id`) VALUES ('TrinityCore rev. fbdc1265d5c2+ 2022-04-02 01:00:31 +0200 (master branch) (Win64, Release, Dynamic)','fbdc1265d5c2+','TDB 335.22021',22021);
+INSERT INTO `version` (`core_version`, `core_revision`, `db_version`, `cache_id`) VALUES ('TrinityCore rev. 16d33b713a5d+ 2022-04-11 18:38:22 +0200 (3.3.5 branch) (Win64, Release, Dynamic)','16d33b713a5d+','TDB 335.22021',22021);
 /*!40000 ALTER TABLE `version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-04 21:47:16
+-- Dump completed on 2022-04-14  5:04:13

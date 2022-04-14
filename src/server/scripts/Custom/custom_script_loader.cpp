@@ -20,6 +20,9 @@ void AddSC_NPC_TransmogDisplayVendor();
 void AddLfgSoloScripts();
 void AddSolocraftScripts();
 void AddSC_skip_StarterArea();
+void AddSC_racial_traits_npc();
+void AddSC_npc_teleport();
+void AddSC_npc_1v1arena();
 
 // The name of this function should match:
 // void Add${NameOfDirectory}Scripts()
@@ -29,4 +32,7 @@ void AddCustomScripts()
     AddLfgSoloScripts();
     AddSolocraftScripts();
     AddSC_skip_StarterArea();
+    AddSC_racial_traits_npc();
+    AddSC_npc_teleport();
+    AddSC_npc_1v1arena();
 }
