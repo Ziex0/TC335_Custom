@@ -11,10 +11,6 @@
 <p><li>Solo Looking for Group</li></p>
 <p><li>Player and Item Gossip</li></p>
 <p><li>Skip DK Start Area</li></p>
-<p><li>Teleport NPC (Use SQL Tables)</li></p>
-<p><li>Racial Trait Swaping</li></p>
-<p><li>One vs. One Arena Matches</li></p>
-<p><li>Moveable Gameobjects</li></p>    
 <br>
 <br>
 <b>Custom Scripts (Softcoded)</b>
