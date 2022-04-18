@@ -13,7 +13,8 @@
 <p><li>Skip DK Start Area</li></p>
 <p><li>Racial Trait Swapper</li></p>
 <p><li>One vs. One Arena Match</li></p>
-<p><li>Teleport Portal (Use SQL Tables)</li></p>    
+<p><li>Teleport Portal (Use SQL Tables)</li></p>   
+<p><li>Moveable Gameobjects</li></p>        
 <br>
 <br>
 <b>Custom Scripts (Softcoded)</b>
