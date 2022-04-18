@@ -33,17 +33,17 @@ CREATE TABLE `creature_template_outfits` (
   `hair` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `haircolor` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `facialhair` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `head` int(10) unsigned NOT NULL DEFAULT '0',
-  `shoulders` int(10) unsigned NOT NULL DEFAULT '0',
-  `body` int(10) unsigned NOT NULL DEFAULT '0',
-  `chest` int(10) unsigned NOT NULL DEFAULT '0',
-  `waist` int(10) unsigned NOT NULL DEFAULT '0',
-  `legs` int(10) unsigned NOT NULL DEFAULT '0',
-  `feet` int(10) unsigned NOT NULL DEFAULT '0',
-  `wrists` int(10) unsigned NOT NULL DEFAULT '0',
-  `hands` int(10) unsigned NOT NULL DEFAULT '0',
-  `back` int(10) unsigned NOT NULL DEFAULT '0',
-  `tabard` int(10) unsigned NOT NULL DEFAULT '0',
+  `head` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `shoulders` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `body` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `chest` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `waist` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `legs` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `feet` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `wrists` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `hands` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `back` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
+  `tabard` varchar(10) COLLATE latin1_german1_ci NOT NULL DEFAULT '0',
   `guildid` int(10) unsigned NOT NULL DEFAULT '0',
   `description` text COLLATE latin1_german1_ci,
   PRIMARY KEY (`entry`)
@@ -56,7 +56,7 @@ CREATE TABLE `creature_template_outfits` (
 
 LOCK TABLES `creature_template_outfits` WRITE;
 /*!40000 ALTER TABLE `creature_template_outfits` DISABLE KEYS */;
-INSERT INTO `creature_template_outfits` (`entry`, `npcsoundsid`, `race`, `class`, `gender`, `skin`, `face`, `hair`, `haircolor`, `facialhair`, `head`, `shoulders`, `body`, `chest`, `waist`, `legs`, `feet`, `wrists`, `hands`, `back`, `tabard`, `guildid`, `description`) VALUES (214054,0,10,6,0,4,15,8,1,4,38661,38663,0,38665,0,38669,38670,0,38667,39320,0,0,'Yggdrasil');
+INSERT INTO `creature_template_outfits` (`entry`, `npcsoundsid`, `race`, `class`, `gender`, `skin`, `face`, `hair`, `haircolor`, `facialhair`, `head`, `shoulders`, `body`, `chest`, `waist`, `legs`, `feet`, `wrists`, `hands`, `back`, `tabard`, `guildid`, `description`) VALUES (3000000123,0,11,1,1,14,4,10,3,5,'-31286','-43617','0','-26267','-26270','-26272','0','0','-43698','0','0',0,NULL);
 /*!40000 ALTER TABLE `creature_template_outfits` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -69,4 +69,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-17 18:39:41
+-- Dump completed on 2022-04-18  8:54:44
