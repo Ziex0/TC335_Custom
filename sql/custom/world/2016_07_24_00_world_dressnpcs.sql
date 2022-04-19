@@ -1,19 +1,3 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : IGEL MySQL
- Source Server Type    : MySQL
- Source Server Version : 50737
- Source Host           : 192.168.178.55:3306
- Source Schema         : wotlk_world
-
- Target Server Type    : MySQL
- Target Server Version : 50737
- File Encoding         : 65001
-
- Date: 19/04/2022 02:19:48
-*/
-
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
