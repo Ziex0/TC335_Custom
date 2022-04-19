@@ -1,4 +1,4 @@
-INSERT INTO `creature_template` VALUES (95034, 0, 0, 0, 0, 0, 26502, 0, 0, 0, 'Thore Ericson', 'Globaler Reisedienst', NULL, 0, 83, 83, 0, 35, 1, 1, 1.14286, 2, 1, 0, 0, 0, 1, 1, 1, 2, 2048, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 3, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 2, 'npc_teleport', 0);
+REPLACE INTO `creature_template` VALUES (95034, 0, 0, 0, 0, 0, 26502, 0, 0, 0, 'Thore Ericson', 'Globaler Reisedienst', NULL, 0, 83, 83, 0, 35, 1, 1, 1.14286, 2, 1, 0, 0, 0, 1, 1, 1, 2, 2048, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 3, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 2, 'npc_teleport', 0);
 
 DROP TABLE IF EXISTS `custom_npc_tele_category`;
 CREATE TABLE `custom_npc_tele_category` (
@@ -97,53 +97,4 @@ VALUES
    (24, 'inv_misc_shadowegg', 30, 000000, 'Karazhan', -11118.8, -2010.84, 47.0807, 0, 0, 0, 0, "", "Karazhan"),
    (25, 'inv_misc_shadowegg', 30, 000000, 'Maraudon', -1433.33, 2955.34, 96.21, 1, 4.82, 0, 0, "", "Maraudon"),
    (26, 'inv_misc_shadowegg', 30, 000000, 'Molten Core', 1121.45, -454.317, -101.33, 230, 3.5, 0, 0, "", "Geschmolzener Kern"),
-   (27, 'inv_misc_shadowegg', 30, 000000, 'Naxxramas', 3125.18, -3748.02, 136.049, 0, 0, 0, 0, "", "Naxxramas"),
-   (28, 'inv_misc_shadowegg', 30, 000000, "Onyxia's Lair", -4707.44, -3726.82, 54.6723, 1, 3.8, 0, 0, "", "Onyxias Hort"),
-   (29, 'inv_misc_shadowegg', 30, 000000, 'Orgrimmar', 1552.5, -4420.66, 8.94802, 1, 0, 0, 0, "", "Orgrimmar"),
-   (30, 'inv_misc_shadowegg', 30, 000000, 'Razor Hill', 315.721, -4743.4, 10.4867, 1, 0, 0, 0, "", "Klingenhügel"),
-   (31, 'inv_misc_shadowegg', 30, 000000, 'Razorfen Downs', -4645.08, -2470.85, 85.53, 1, 4.39, 0, 0, "", "Hügel der Klingenhauer"),
-   (32, 'inv_misc_shadowegg', 30, 000000, 'Razorfen Kraul', -4484.04, -1739.4, 86.47, 1, 1.23, 0, 0, "", "Kral der Klingenhauer"),
-   (33, 'inv_misc_shadowegg', 30, 000000, 'Ring of Trials', -1999.94, 6581.71, 11.32, 530, 2.3, 0, 0, "", "Der Ring der Prüfung"),
-   (34, 'inv_misc_shadowegg', 30, 000000, "Ruins of Ahn'Qiraj", -8409.03, 1498.83, 27.3615, 1, 2.49757, 0, 0, "", "Ruinen von Ahn'Qiraj"),
-   (35, 'inv_misc_shadowegg', 30, 000000, 'Scholomance', 1219.01, -2604.66, 85.61, 0, 0.5, 0, 0, "", "Scholomance"),
-   (36, 'inv_misc_shadowegg', 30, 000000, 'Shadowfang Keep', -254.47, 1524.68, 76.89, 0, 1.56, 0, 0, "", "Burg Schattenfang"),
-   (37, 'inv_misc_shadowegg', 30, 000000, 'Shattrath City', -1850.21, 5435.82, -10.9614, 530, 3.40391, 0, 0, "", "Shattrath"),
-   (38, 'inv_misc_shadowegg', 30, 000000, 'Silvermoon', 9338.74, -7277.27, 13.7895, 530, 0, 0, 0, "", "Silbermond"),
-   (39, 'inv_misc_shadowegg', 30, 000000, 'Stormwind', -8960.14, 516.266, 96.3568, 0, 0, 0, 0, "", "Sturmwind"),
-   (40, 'inv_misc_shadowegg', 30, 000000, 'Stratholme', 3263.54, -3379.46, 143.59, 0, 0, 0, 0, "", "Stratholme"),
-   (41, 'inv_misc_shadowegg', 30, 000000, 'Tempest Keep', 3089.58, 1399.05, 187.653, 530, 4.79407, 0, 0, "", "Die Festung der Stürme"),
-   (42, 'inv_misc_shadowegg', 30, 000000, "Temple of Ahn'Qiraj", -8245.84, 1983.74, 129.072, 1, 0.936195, 0, 0, "", "Ahn'Qiraj"),
-   (43, 'inv_misc_shadowegg', 30, 000000, 'The Deadmines', -11212, 1658.58, 25.67, 0, 1.45, 0, 0, "", "Die Todesminen"),
-   (44, 'inv_misc_shadowegg', 30, 000000, 'The Maul', -3761.49, 1133.43, 132.083, 1, 4.57259, 0, 0, "", "Düsterbruch"),
-   (45, 'inv_misc_shadowegg', 30, 000000, 'The Scarlet Monastery', 2843.89, -693.74, 139.32, 0, 5.11, 0, 0, "", "Das Scharlachrote Kloster"),
-   (46, 'inv_misc_shadowegg', 30, 000000, 'The Sunken Temple', -10346.9, -3851.9, -43.41, 0, 6.09, 0, 0, "", "Versunkener Tempel"),
-   (47, 'inv_misc_shadowegg', 30, 000000, 'The Wailing Caverns', -722.53, -2226.3, 16.94, 1, 2.71, 0, 0, "", "Die Hühlen des Wehklagens"),
-   (48, 'inv_misc_shadowegg', 30, 000000, 'Thunder Bluff', -1290, 147.034, 129.682, 1, 4.919, 0, 0, "", "Donnerfels"),
-   (49, 'inv_misc_shadowegg', 30, 000000, 'Uldaman', -6119.7, -2957.3, 204.11, 0, 0.03, 0, 0, "", "Uldaman"),
-   (50, 'inv_misc_shadowegg', 30, 000000, 'Undercity', 1819.71, 238.79, 60.5321, 0, 0, 0, 0, "", "Unterstadt"),
-   (51, 'inv_misc_shadowegg', 30, 000000, 'Warsong Gulch', 930.851, 1431.57, 345.537, 489, 0.015704, 0, 0, "", "Kriegshymnenschlucht"),
-   (52, 'inv_misc_shadowegg', 30, 000000, 'Warsong Gulch', 1525.95, 1481.66, 352.001, 489, 3.20756, 0, 0, "", "Kriegshymnenschlucht"),
-   (53, 'inv_misc_shadowegg', 30, 000000, "Zul'Aman", 6846.95, -7954.5, 170.028, 530, 4.61501, 0, 0, "", "Zul'Aman"),
-   (54, 'inv_misc_shadowegg', 30, 000000, "Zul'Farrak", -6839.39, -2911.03, 8.87, 1, 0.41, 0, 0, "", "Zul'Farrak"),
-   (55, 'inv_misc_shadowegg', 30, 000000, "Zul'Gurub", -11916.7, -1212.82, 92.2868, 0, 4.6095, 0, 0, "", "Zul'Gurub"),
-   (56, 'inv_misc_shadowegg', 30, 000000, 'GM Island', 16254, 16276.9, 14.5082, 1, 1.70269, 0, 0, "Ile des MJ", "GM Insel");
-
-TRUNCATE `custom_npc_tele_association`;
-INSERT INTO `custom_npc_tele_association`
-  (`cat_id`, `dest_id`)
-VALUES
-  (1, 13), (1, 15), (1, 18), (1, 22), (1, 23), (1, 37), (1, 39), (2, 23), (2, 29), (2, 30), (2, 37), (2, 38), (2, 48), (2, 50), (3, 1), (3, 4), (3, 16), (3, 52), (4, 2), (4, 3), (4, 17), (4, 51), (5, 11), (5, 20), (5, 33), (5, 44), (6, 6), (6, 7), (6, 8), (6, 14), (6, 25), (6, 31), (6, 32), (6, 35), (6, 36), (6, 40), (6, 43), (6, 45), (6, 46), (6, 47), (6, 49), (6, 54), (7, 9), (7, 26), (7, 27), (7, 28), (7, 34), (7, 42), (7, 55), (8, 5), (8, 10), (8, 12), (8, 19), (8, 21), (8, 24), (8, 41), (8, 53), (9, 56);
-
--- `npc_text`
-REPLACE INTO `npc_text` (`ID`, `text0_0`,`BroadcastTextID0`) VALUES
-   (100000, 'Choose your Category.', 0),
-   (100001, 'Choose your Destination.', 49777);
-
--- `creature_template`
-REPLACE INTO `creature_template` VALUES (95034, 0, 0, 0, 0, 0, 26502, 0, 0, 0, 'Geöffnetes Dimensionstor', '', NULL, 0, 83, 83, 0, 35, 1, 1, 1.14286, 2, 1, 0, 0, 0, 1, 1, 1, 2, 2048, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 3, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 2, 'npc_teleport', 0);
-
-SET @Id=8000;
-DELETE FROM trinity_string WHERE entry BETWEEN @Id AND @Id+2;
-INSERT INTO trinity_string (`entry`, `content_default`, `content_loc2`, `content_loc3`, `content_loc6`, `content_loc7`) VALUES
-(@Id+0, "You do not have the required level. This destination requires level", "", "Ihr habt nicht das erforderliche Level. Dieses Ziel benötigt Level","No tienes el nivel requerido. Este destino requiere nivel","No tienes el nivel requerido. Este destino requiere nivel"),
-(@Id+1, "You do not have enough money. The price for teleportation is", "", "Ihr habt nicht genug Geld. Der Preis für die Teleportation beträg","No tienes suficiente dinero. El precio del destino es","No tienes suficiente dinero. El precio del destino es");
+   (27, 'inv_misc_shadowegg', 30, 000000, 'Naxxramas', 3125.18, -3748.02, 136.049, 0, 0, 0, 0, "", "Naxxramas");
