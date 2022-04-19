@@ -1,3 +1,5 @@
+UPDATE creature_template SET scale='0.5' WHERE entry=1985;
+
 To make things look uniform here's the headers we use for sourcefiles.
 
  It makes it "prettier" as it's applied to any of the sourcefiles 
