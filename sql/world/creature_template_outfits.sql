@@ -56,7 +56,7 @@ CREATE TABLE `creature_template_outfits` (
 
 LOCK TABLES `creature_template_outfits` WRITE;
 /*!40000 ALTER TABLE `creature_template_outfits` DISABLE KEYS */;
-INSERT INTO `creature_template_outfits` (`entry`, `npcsoundsid`, `race`, `class`, `gender`, `skin`, `face`, `hair`, `haircolor`, `facialhair`, `head`, `shoulders`, `body`, `chest`, `waist`, `legs`, `feet`, `wrists`, `hands`, `back`, `tabard`, `guildid`, `description`) VALUES (3000000123,0,11,1,1,14,4,10,3,5,'-31286','-43617','0','-26267','-26270','-26272','0','0','-43698','0','0',0,NULL);
+INSERT INTO `creature_template_outfits` (`entry`, `npcsoundsid`, `race`, `class`, `gender`, `skin`, `face`, `hair`, `haircolor`, `facialhair`, `head`, `shoulders`, `body`, `chest`, `waist`, `legs`, `feet`, `wrists`, `hands`, `back`, `tabard`, `guildid`, `description`) VALUES (3000000123,0,11,1,1,14,4,10,3,5,'-31286','-43617','0','-26267','-26270','-26272','0','0','-43698','0','-9627',5,NULL);
 /*!40000 ALTER TABLE `creature_template_outfits` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -69,4 +69,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-18  8:54:44
+-- Dump completed on 2022-04-22  3:55:38
